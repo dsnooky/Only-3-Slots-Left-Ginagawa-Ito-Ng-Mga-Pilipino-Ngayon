@@ -1,293 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LUMIÈRE | Perfume Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<title>Only 3 Slots Left – Ginagawa Ito Ng Mga Pilipino Ngayon</title>
 
-  <!-- Icons -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
-  <style>
-    :root {
-      --primary: #1e1a17;
-      --accent: #c8a97e;
-      --bg: #faf8f5;
-      --text: #333;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    header {
-      background: #fff;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 2px;
-      font-size: 1.8rem;
-    }
-
-    nav a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    nav a:hover { color: var(--accent); }
-
-    .cart-btn {
-      position: relative;
-      cursor: pointer;
-    }
-
-    .cart-count {
-      position: absolute;
-      top: -6px;
-      right: -10px;
-      background: var(--accent);
-      color: #000;
-      font-size: 0.7rem;
-      padding: 2px 6px;
-      border-radius: 50%;
-    }
-
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      padding: 80px 40px;
-      align-items: center;
-    }
-
-    .hero h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin-bottom: 20px;
-    }
-
-    .hero p { margin-bottom: 30px; line-height: 1.6; }
-
-    .btn {
-      background: var(--primary);
-      color: #fff;
-      padding: 12px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-block;
-    }
-
-    .btn:hover { background: var(--accent); color: #000; }
-
-    .hero img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-    }
-
-    .products {
-      padding: 60px 40px;
-    }
-
-    .products h3 {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      margin-bottom: 50px;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 35px;
-    }
-
-    .product {
-      background: #fff;
-      border-radius: 22px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 12px 25px rgba(0,0,0,0.05);
-      transition: transform 0.3s;
-    }
-
-    .product:hover { transform: translateY(-6px); }
-
-    .product img {
-      width: 100%;
-      border-radius: 15px;
-      margin-bottom: 15px;
-    }
-
-    .product h4 { font-weight: 500; margin-bottom: 8px; }
-
-    .price {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 15px;
-      display: block;
-    }
-
-    .add-cart {
-      background: transparent;
-      border: 1px solid var(--primary);
-      padding: 10px 22px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    .add-cart:hover {
-      background: var(--primary);
-      color: #fff;
-    }
-
-    /* CART DRAWER */
-    .cart {
-      position: fixed;
-      top: 0;
-      right: -400px;
-      width: 350px;
-      height: 100%;
-      background: #fff;
-      box-shadow: -10px 0 30px rgba(0,0,0,0.1);
-      padding: 25px;
-      transition: right 0.4s ease;
-      z-index: 200;
-    }
-
-    .cart.open { right: 0; }
-
-    .cart h3 {
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 20px;
-    }
-
-    .cart-item {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
-    }
-
-    .checkout {
-      margin-top: 25px;
-      width: 100%;
-      text-align: center;
-    }
-
-    footer {
-      background: var(--primary);
-      color: #fff;
-      padding: 40px;
-      text-align: center;
-      margin-top: 80px;
-    }
-
-    @media(max-width: 768px) {
-      .hero { grid-template-columns: 1fr; text-align: center; }
-      header { flex-direction: column; gap: 10px; }
-    }
-  </style>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+}
+.container {
+    max-width: 720px;
+    background: #fff;
+    margin: auto;
+    padding: 20px;
+}
+h1 { color: #d32f2f; }
+.highlight {
+    background: #fff3cd;
+    padding: 10px;
+    border-left: 5px solid #ff9800;
+    margin: 15px 0;
+}
+.cta {
+    background: #d32f2f;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin: 25px 0;
+    font-size: 20px;
+    border-radius: 6px;
+}
+.cta a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.urgency {
+    background: #000;
+    color: #0f0;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+.slots {
+    background: #fdecea;
+    border-left: 5px solid #f44336;
+    padding: 10px;
+    margin: 15px 0;
+    font-weight: bold;
+    text-align: center;
+}
+.comments {
+    margin-top: 30px;
+}
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+.comment strong {
+    color: #365899;
+}
+.time {
+    color: #777;
+    font-size: 12px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>LUMIÈRE</h1>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#products">Shop</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <span class="cart-btn" onclick="toggleCart()">
-      <i class="fas fa-shopping-bag"></i>
-      <span class="cart-count" id="cartCount">0</span>
-    </span>
-  </nav>
-</header>
+<div class="container">
 
-<section class="hero">
-  <div>
-    <h2>Luxury Fragrance<br>Redefined</h2>
-    <p>Experience premium perfumes crafted for elegance, confidence, and lasting impressions.</p>
-    <a href="#products" class="btn">Shop Now</a>
-  </div>
-  <img src="https://images.unsplash.com/photo-1615634262417-7bd1fdd3c91d" alt="Perfume">
-</section>
-
-<section class="products" id="products">
-  <h3>Featured Collection</h3>
-  <div class="product-grid">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539">
-      <h4>Rose Velvet</h4>
-      <span class="price">$89</span>
-      <button class="add-cart" onclick="addToCart('Rose Velvet',89)">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1585386959984-a4155228f1a8">
-      <h4>Midnight Oud</h4>
-      <span class="price">$120</span>
-      <button class="add-cart" onclick="addToCart('Midnight Oud',120)">Add to Cart</button>
-    </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1600180758895-682a3c1d6fcb">
-      <h4>Amber Bloom</h4>
-      <span class="price">$99</span>
-      <button class="add-cart" onclick="addToCart('Amber Bloom',99)">Add to Cart</button>
-    </div>
-  </div>
-</section>
-
-<div class="cart" id="cart">
-  <h3>Your Cart</h3>
-  <div id="cartItems"></div>
-  <a href="#" class="btn checkout">Checkout</a>
+<div class="urgency">
+👀 <span id="viewers">52</span> tumitingin ngayon | 🔥 <span id="clicks">1,421</span> clicks today
 </div>
 
-<footer>
-  <p>&copy; 2025 LUMIÈRE Perfume Store</p>
-</footer>
+<div class="slots">
+⏳ <span id="slots">3</span> SLOTS NA LANG ANG NATITIRA!  
+<br>
+Auto-redirect in <span id="timer">10</span> seconds…
+</div>
+
+<h1>😱 “Hindi Ko Inakala Na Totoo Ito… Pero Mali Ako”</h1>
+
+<p>Isang ordinaryong Pilipino ang nagdesisyong subukan ito sa huling pagkakataon.</p>
+
+<div class="highlight">
+“Akala ko wala na akong pag-asa. Pero ito na yata ang sagot.”
+</div>
+
+<p>Cellphone lang ang gamit. Walang puhunan. Walang experience.</p>
+
+<div class="cta">
+<a href="PASTE_YOUR_AFFILIATE_LINK_HERE" target="_blank" onclick="addClick()">
+👉 I-CLICK BAGO MAUBOS 👈
+</a>
+</div>
+
+<!-- COMMENTS -->
+<div class="comments">
+<h3>💬 Mga Komento</h3>
+
+<div class="comment">
+<strong>Joyce A.</strong><br>
+Hala legit to 😭 salamat nag try ako agad  
+<div class="time">1 oras ang nakalipas</div>
+</div>
+
+<div class="comment">
+<strong>Renzo P.</strong><br>
+Paubos na pala slots. Buti nakaabot ako  
+<div class="time">2 oras ang nakalipas</div>
+</div>
+
+<div class="comment">
+<strong>Anonymous</strong><br>
+Last chance ko na to. Sana kayo rin  
+<div class="time">4 oras ang nakalipas</div>
+</div>
+
+</div>
+
+</div>
 
 <script>
-  let cart = [];
+let viewers = 52;
+let clicks = 1421;
+let slots = 3;
+let timeLeft = 10;
+const affiliateLink = "PASTE_YOUR_AFFILIATE_LINK_HERE";
 
-  function toggleCart() {
-    document.getElementById('cart').classList.toggle('open');
-  }
+// viewers animation
+setInterval(() => {
+    viewers += Math.floor(Math.random() * 3) - 1;
+    if (viewers < 25) viewers = 25;
+    document.getElementById("viewers").innerText = viewers;
+}, 3000);
 
-  function addToCart(name, price) {
-    cart.push({ name, price });
-    document.getElementById('cartCount').innerText = cart.length;
-    renderCart();
-  }
+// slot countdown
+setInterval(() => {
+    if (slots > 0) {
+        slots--;
+        document.getElementById("slots").innerText = slots;
+    }
+}, 6000);
 
-  function renderCart() {
-    const container = document.getElementById('cartItems');
-    container.innerHTML = '';
-    cart.forEach(item => {
-      container.innerHTML += `<div class="cart-item"><span>${item.name}</span><span>$${item.price}</span></div>`;
-    });
-  }
+// redirect timer
+const timerInterval = setInterval(() => {
+    timeLeft--;
+    document.getElementById("timer").innerText = timeLeft;
+
+    if (timeLeft <= 0) {
+        window.location.href = affiliateLink;
+        clearInterval(timerInterval);
+    }
+}, 1000);
+
+function addClick() {
+    clicks++;
+    document.getElementById("clicks").innerText = clicks;
+}
 </script>
 
 </body>
